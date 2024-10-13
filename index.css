@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+    "header header ads-2"
+    "ads-1 small-header ads-2"
+    "ads-1 main-content ads-2"
+    "footer footer footer";
+    grid-template-columns: 150px auto 150px;
+    grid-template-rows: minmax(80px, auto) minmax(80px, auto) minmax(50%, auto) minmax(80px, auto); /*!!*/
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header {
+    grid-area: header;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-areas:
+    "header-logo header-content";
+    grid-template-columns: 150px auto;
+    position: sticky;
+    top: 0;
+}
+
+.header-logo {
+    grid-area: header-logo;
+}
+
+.header-content {
+    grid-area: header-content;
+}
+
+.ads-1 {
+    grid-area: ads-1;
+}
+
+.ads-2 {
+    grid-area: ads-2;
+}
+
+.small-header {
+    grid-area: small-header;
+    background-color: #333;
+    align-content: center;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: white;
+    /*opacity: 0.5;*/
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    display: grid;
+    grid-template-areas:
+    "- footer-content footer-logo";
+    grid-template-columns: 150px auto 150px;
+}
+
+.footer-logo {
+    grid-area: footer-logo;
+    align-self: center;
+}
+
+.footer-content {
+    grid-area: footer-content;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-link {
+    transition: .2s ease;
+}
+
+.mlr-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.image {
+    width: 90%;
+    height: auto;
+    margin: 0;
+}
+
+.arial-black {
+    font-family: "Arial Black", serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.white-font {
+    color: white;
+}
+
+.gray-font {
+    color: #333;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.ul-no-style {
+    list-style-type: none;
+}
+
+.horizontal-container{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.width-40 {
+    width: 40%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.font-size-30 {
+    font-size: 30px;
+}
