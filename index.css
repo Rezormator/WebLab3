@@ -1,159 +1,139 @@
 * {
     margin: 0;
-    padding: 0;
 }
 
 body {
     display: grid;
     grid-template-areas:
-    "header header ads-2"
-    "ads-1 small-header ads-2"
-    "ads-1 main-content ads-2"
+    "navbar navbar ."
+    ". . ."
+    ". subtitle ."
+    ". content ."
     "footer footer footer";
-    grid-template-columns: 150px auto 150px;
-    grid-template-rows: minmax(80px, auto) minmax(80px, auto) minmax(50%, auto) minmax(80px, auto); /*!!*/
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: 130px 500px minmax(80px, auto) auto minmax(100px, auto);
     min-height: 100vh;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    background-image: url('images/background-3.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
-.header {
-    grid-area: header;
-    background-color: whitesmoke;
-    display: grid;
-    grid-template-areas:
-    "header-logo header-content";
-    grid-template-columns: 150px auto;
+.background-image {
+    background: url('images/background.png') no-repeat top center;
+    background-size: 100% auto;
+}
+
+.background-color {
+    background-color: #e1e1e1
+}
+
+.navbar {
+    grid-area: navbar;
     position: sticky;
     top: 0;
+    display: flex;
+    align-items: center;
 }
 
-.header-logo {
-    grid-area: header-logo;
+.subtitle {
+    grid-area: subtitle;
+    padding: 40px;
+    font-family: "Tahoma", serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
 }
 
-.header-content {
-    grid-area: header-content;
+.white-background-color {
+    background-color: #f7f7f7;
 }
 
-.ads-1 {
-    grid-area: ads-1;
+.content {
+    grid-area: content;
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.ads-2 {
-    grid-area: ads-2;
-}
-
-.small-header {
-    grid-area: small-header;
-    background-color: #333;
-    align-content: center;
-}
-
-.main-content {
-    grid-area: main-content;
-    background-color: white;
-    /*opacity: 0.5;*/
+.content * {
+    margin: 25px;
 }
 
 .footer {
     grid-area: footer;
-    background-color: #333;
+    background-color: #333333;
     display: grid;
     grid-template-areas:
-    "- footer-content footer-logo";
-    grid-template-columns: 150px auto 150px;
-}
-
-.footer-logo {
-    grid-area: footer-logo;
-    align-self: center;
+    ". footer-content .";
+    grid-template-columns: 100px auto 100px;
 }
 
 .footer-content {
     grid-area: footer-content;
-}
-
-.nav-bar {
     display: flex;
-}
-
-.nav-link {
-    transition: .2s ease;
-}
-
-.mlr-20 {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.nav-link:hover {
-    color: red;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.align-items-center {
+    justify-content: space-between;
     align-items: center;
 }
 
-.image {
-    width: 90%;
-    height: auto;
-    margin: 0;
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    margin: 100px;
 }
 
-.arial-black {
-    font-family: "Arial Black", serif;
+.nav-item {
+    font-family: "Tahoma", serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 300;
 }
 
-.white-font {
-    color: white;
+.nav-item:hover {
+    color: #e00f00;
 }
 
-.gray-font {
+.red-header {
+    font-family: "Tahoma", serif;
+    color: #e00f00;
+    font-size: 50px;
+}
+
+.content-font {
+    font-family: "Tahoma", serif;
     color: #333;
+    font-size: 30px;
 }
 
-.align-self-center {
-    align-self: center;
+.image {
+    display: flex;
+    width: calc(100% - 50px);
+    height: auto;
+}
+
+.mlr-150 {
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 .ul-no-style {
     list-style-type: none;
 }
 
-.horizontal-container{
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
+.footer-list-item {
+    font-family: "Tahoma", serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
 }
 
-.width-40 {
-    width: 40%;
+.white {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: normal;
 }
 
-.width-50 {
-    width: 50%;
-}
+@media (max-width: 768px) {
 
-.width-60 {
-    width: 60%;
-}
-
-.font-size-30 {
-    font-size: 30px;
 }
