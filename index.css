@@ -74,6 +74,7 @@ body {
     display: flex;
     gap: 40px;
     margin-left: 100px;
+    padding-left: 0;
 }
 
 .nav-item {
@@ -153,6 +154,7 @@ body {
 
     .navbar-list {
         margin-left: 0;
+        padding-left: 35px;
     }
 
     .image {
